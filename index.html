@@ -1,41 +1,253 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    />
 
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <!-- Primary Meta Tags -->
+    <title>Abdelrhman Muhamed | AI & Full-Stack Software Engineer</title>
+    <meta name="title" content="Abdelrhman Muhamed | AI & Full-Stack Software Engineer" />
+    <meta name="description" content="Portfolio of Abdelrhman Muhamed, an AI & Full-Stack Software Engineer bridging modern web and mobile development with RAG architectures, fine-tuned LLMs, and agentic workflows." />
+    <meta name="keywords" content="Abdelrhman Muhamed, Software Engineer, Full-Stack Developer, MEAN Stack, Web Development, React, Node.js, Cross-Platform, Portfolio" />
+    <meta name="author" content="Abdelrhman Muhamed" />
+    <meta name="theme-color" content="#0b0f14" />
+    <link rel="canonical" href="https://abdelrhmanmuhamed978.github.io/" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://abdelrhmanmuhamed978.github.io/" />
+    <meta property="og:site_name" content="Abdelrhman Muhamed | Portfolio" />
+    <meta property="og:title" content="Abdelrhman Muhamed | AI & Full-Stack Engineer" />
+    <meta property="og:description" content="Explore the portfolio of Abdelrhman Muhamed — AI & Full-Stack Software Engineer specializing in RAG, agentic AI, web, and cross-platform development." />
+    <meta property="og:image" content="https://abdelrhmanmuhamed978.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Abdelrhman Muhamed — Full-Stack & Cross-Platform Developer" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Abdelrhman_Dev" />
+    <meta name="twitter:title" content="Abdelrhman Muhamed | Professional Portfolio" />
+    <meta name="twitter:description" content="Explore the professional portfolio of Abdelrhman Muhamed, specializing in full-stack web and cross-platform development." />
+    <meta name="twitter:image" content="https://abdelrhmanmuhamed978.github.io/og-image.png" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/Protofolio_Flutter/">
+    <!-- JSON-LD Person Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdelrhman Muhamed Abdelghafar",
+        "url": "https://abdelrhmanmuhamed978.github.io/",
+        "image": "https://abdelrhmanmuhamed978.github.io/og-image.png",
+        "jobTitle": "AI & Full-Stack Software Engineer",
+        "description": "AI & Full-Stack Software Engineer bridging modern web/mobile development with RAG architectures, fine-tuned LLMs, and agentic workflows.",
+        "sameAs": [
+          "https://github.com/AbdelrhmanMuhamed978",
+          "https://linkedin.com/in/abdelrhmanmuhmed"
+        ],
+        "email": "mailto:abdelrhmanmuhamed978@gmail.com",
+        "telephone": "+20 127 117 5532",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "6th of October City",
+          "addressRegion": "Giza",
+          "addressCountry": "EG"
+        },
+        "knowsAbout": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "Angular",
+          "NestJS",
+          "GraphQL",
+          "MongoDB",
+          "SQL Server",
+          "Flutter",
+          "Docker"
+        ]
+      }
+    </script>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Abdelrhman Muhamed - Full Stack Web&Mobile Developer ">
+    <!-- GitHub Pages SPA redirect restore (pairs with public/404.html) -->
+    <script>
+      (function (location) {
+        if (location.search[1] === "/") {
+          var decoded = location.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            "",
+            location.pathname.slice(0, -1) + decoded + location.hash
+          );
+        }
+      })(window.location);
+    </script>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Abdelrhman Flutter Portfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- Theme + language pre-init: avoid flashes on reload -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
+          }
+          var lang = localStorage.getItem("lang");
+          if (lang === "ar" || lang === "de") {
+            document.documentElement.lang = lang;
+          }
+          if (lang === "ar") {
+            document.documentElement.dir = "rtl";
+          }
+        } catch (e) {}
+      })();
+    </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Pre-React boot shell (replaced by the real-percentage SiteLoader) -->
+    <style>
+      #boot {
+        position: fixed;
+        inset: 0;
+        z-index: 300;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #0b0f14;
+      }
+      #boot .boot-mark {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        color: #f2f5f9;
+        letter-spacing: -1px;
+      }
+      #boot .boot-bar {
+        width: 180px;
+        height: 2px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+      #boot .boot-bar span {
+        display: block;
+        width: 40%;
+        height: 100%;
+        border-radius: 999px;
+        background: #38bdf8;
+        animation: boot-slide 1.1s ease-in-out infinite;
+      }
+      @keyframes boot-slide {
+        0% { transform: translateX(-120%); }
+        100% { transform: translateX(320%); }
+      }
+      #boot .boot-note {
+        display: none;
+        margin: 8px 0 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #94a3b8;
+      }
+      #boot .boot-note [data-note] { display: none; }
+      #boot .boot-note [data-note="en"] { display: inline; }
+      html[lang="ar"] #boot .boot-note [data-note="en"],
+      html[lang="de"] #boot .boot-note [data-note="en"] { display: none; }
+      html[lang="ar"] #boot .boot-note [data-note="ar"] { display: inline; }
+      html[lang="de"] #boot .boot-note [data-note="de"] { display: inline; }
+      @media (max-width: 767px) {
+        #boot .boot-note { display: block; }
+      }
+      .light #boot { background: #f8fafc; }
+      .light #boot .boot-mark { color: #0f172a; }
+      .light #boot .boot-bar { background: rgba(15, 23, 42, 0.12); }
+      .light #boot .boot-note { color: #64748b; }
+      @media (prefers-reduced-motion: reduce) {
+        #boot .boot-bar span { animation: none; width: 100%; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DJy7wLnC.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-6NUTllzr.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-DsK-6whY.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-vendor-BkmE1Yz-.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Cj4GBeeV.css">
+  </head>
 
-  <title>Abdelrhman Portfolio - Full Stack Developer</title>
-  <link rel="manifest" href="manifest.json">
-</head>
+  <body>
+    <div id="boot" aria-hidden="true">
+      <div class="boot-mark">A.</div>
+      <div class="boot-bar"><span></span></div>
+      <p class="boot-note">
+        <span data-note="en">Best experienced on desktop</span>
+        <span data-note="ar">أفضل تجربة على الحاسوب</span>
+        <span data-note="de">Am besten auf dem Desktop</span>
+      </p>
+    </div>
+    <noscript><style>#boot { display: none; }</style></noscript>
 
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <div id="root"></div>
 
+    <noscript>
+      <div style="max-width: 640px; margin: 72px auto; padding: 0 24px; font-family: system-ui, -apple-system, sans-serif; color: #ffffff; background: #0e0e0e;">
+        <h1 style="margin: 0 0 8px; font-size: 32px;">Abdelrhman Muhamed</h1>
+        <p style="margin: 0 0 24px; color: #bc13fe; font-size: 18px;">Full-Stack &amp; Cross-Platform Developer</p>
+        <p style="margin: 0 0 16px; color: #adadad; line-height: 1.6;">
+          This portfolio is a React application and requires JavaScript to run.
+          You can still reach me through the links below.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 16px;">
+          <li style="margin: 8px 0;"><a style="color: #38bdf8;" href="https://github.com/AbdelrhmanMuhamed978">GitHub — github.com/AbdelrhmanMuhamed978</a></li>
+          <li style="margin: 8px 0;"><a style="color: #38bdf8;" href="https://linkedin.com/in/abdelrhmanmuhmed">LinkedIn — linkedin.com/in/abdelrhmanmuhmed</a></li>
+          <li style="margin: 8px 0;"><a style="color: #38bdf8;" href="mailto:abdelrhmanmuhamed978@gmail.com">Email — abdelrhmanmuhamed978@gmail.com</a></li>
+          <li style="margin: 8px 0;"><a style="color: #38bdf8;" href="https://api.whatsapp.com/send/?phone=0201271175532">WhatsApp — +20 127 117 5532</a></li>
+        </ul>
+      </div>
+    </noscript>
+
+
+    <!-- Voiceflow Chatbot Widget — loaded after window 'load' + requestIdleCallback -->
+    <script>
+      (function () {
+        function loadVoiceflow() {
+          var run = function () {
+            var v = document.createElement("script");
+            v.onload = function () {
+              window.voiceflow.chat.load({
+                verify: { projectID: "69bd5f97bba282e8659dbb7a" },
+                url: "https://general-runtime.voiceflow.com",
+                versionID: "production",
+                voice: { url: "https://runtime-api.voiceflow.com" },
+              });
+            };
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+            v.type = "text/javascript";
+            document.body.appendChild(v);
+          };
+          if ("requestIdleCallback" in window) {
+            window.requestIdleCallback(run, { timeout: 3000 });
+          } else {
+            window.setTimeout(run, 1200);
+          }
+        }
+        if (document.readyState === "complete") {
+          loadVoiceflow();
+        } else {
+          window.addEventListener("load", loadVoiceflow, { once: true });
+        }
+      })();
+    </script>
+  </body>
 </html>
