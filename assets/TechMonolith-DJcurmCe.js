@@ -1,4 +1,4 @@
-import{r as u,j as m}from"./react-vendor-6NUTllzr.js";import{C as L,u as N,a as D,V as b,S as j,b as F,D as k,R as A,U as _,c as R,L as E,M as O}from"./three-vendor-DTDRwZc0.js";import{az as B}from"./vendor-DsK-6whY.js";import{u as V,i as C}from"./index-DSYMR2hB.js";import{c as U,m as H}from"./motion-vendor-BkmE1Yz-.js";const W="/assets/i_want_to_202603200746-CMLCPw7j.webp",G=`
+import{r as u,j as m}from"./react-vendor-6NUTllzr.js";import{C as L,u as N,a as D,V as b,S as j,b as F,D as k,R as A,U as _,c as R,L as E,M as O}from"./three-vendor-DTDRwZc0.js";import{az as B}from"./vendor-DsK-6whY.js";import{u as V,i as C}from"./index-qWsVwLhx.js";import{c as U,m as H}from"./motion-vendor-BkmE1Yz-.js";const W="/assets/i_want_to_202603200746-CMLCPw7j.webp",G=`
 varying vec2 vUv;
 void main() {
   vUv = uv;
