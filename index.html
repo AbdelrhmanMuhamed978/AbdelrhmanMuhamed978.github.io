@@ -192,19 +192,19 @@
         #boot .boot-bar span { animation: none; width: 100%; }
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-DzFeCFGv.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/react-vendor-Dtu6aBKI.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-CcRJ44qZ.js">
-    <link rel="modulepreload" crossorigin href="/assets/motion-vendor-BnGPjBW8.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-HYxj_fpP.css">
-      <link rel="modulepreload" crossorigin href="/assets/BlogSection-CwwbNuhI.js">
-    <link rel="modulepreload" crossorigin href="/assets/ContactSection-BeXK115J.js">
-    <link rel="modulepreload" crossorigin href="/assets/ExperienceSection-BIZBv6SR.js">
-    <link rel="modulepreload" crossorigin href="/assets/Footer-CTdpGq1O.js">
-    <link rel="modulepreload" crossorigin href="/assets/ProjectCards-Bq5_fbQm.js">
-    <link rel="modulepreload" crossorigin href="/assets/ScrollToTopButton-RY5X79Jt.js">
-    <link rel="modulepreload" crossorigin href="/assets/SkillsSection-CdqiGpz8.js">
-    <link rel="modulepreload" crossorigin href="/assets/YoutubeSection-3D-j8Kzl.js">
+    <script type="module" crossorigin src="/assets/index-CeR1MSX9.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-6NUTllzr.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-DsK-6whY.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-vendor-BkmE1Yz-.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BsfJfKOe.css">
+      <link rel="modulepreload" crossorigin href="/assets/BlogSection-DQS8aCcb.js">
+    <link rel="modulepreload" crossorigin href="/assets/ContactSection-BBeKlmgJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/ExperienceSection-C9WNgVJ4.js">
+    <link rel="modulepreload" crossorigin href="/assets/Footer-NR5C2U6N.js">
+    <link rel="modulepreload" crossorigin href="/assets/ProjectCards-D-NNa8Yo.js">
+    <link rel="modulepreload" crossorigin href="/assets/ScrollToTopButton-DMasElV8.js">
+    <link rel="modulepreload" crossorigin href="/assets/SkillsSection-BUt2vzV_.js">
+    <link rel="modulepreload" crossorigin href="/assets/YoutubeSection-BaqYelvy.js">
   </head>
 
   <body>
@@ -239,7 +239,7 @@
     </noscript>
 
 
-    <!-- Voiceflow Chatbot Widget — loaded after first user interaction -->
+    <!-- Voiceflow Chatbot Widget — loaded after window 'load' + requestIdleCallback -->
     <script>
       (function () {
         function loadVoiceflow() {
@@ -263,18 +263,11 @@
             window.setTimeout(run, 1200);
           }
         }
-
-        // Never compete with the landing load; wait for a real interaction.
-        var started = false;
-        window.addEventListener(
-          "site-interact",
-          function () {
-            if (started) return;
-            started = true;
-            window.setTimeout(loadVoiceflow, 1500);
-          },
-          { once: true }
-        );
+        if (document.readyState === "complete") {
+          loadVoiceflow();
+        } else {
+          window.addEventListener("load", loadVoiceflow, { once: true });
+        }
       })();
     </script>
   </body>
